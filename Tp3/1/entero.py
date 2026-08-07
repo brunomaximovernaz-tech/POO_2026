@@ -9,7 +9,7 @@ class Entero:
     def set_numero(self, numero: int):
         self.__numero = numero
 
-    # ── Métodos de cálculo ───────────────────────────────────────
+    # ── Métodos ──────────────────────────────────────────────────
     def cuadrado(self) -> int:
         return self.__numero * self.__numero
 

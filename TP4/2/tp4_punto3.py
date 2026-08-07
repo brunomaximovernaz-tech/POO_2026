@@ -52,4 +52,5 @@ try:
 except AttributeError as e:
     print(f"AttributeError: {e}")
 
+
 print(f"duracionEnSeg: {video2.duracionEnSeg}")  # este sí existe
