@@ -1,0 +1,79 @@
+classDiagram
+    class ElementoGrafico {
+        <<abstract>>
+        -str _color_hex
+        -Punto _posicion_centro
+        -str _nombre_capa
+        +mover_a(nuevo_destino: Punto)
+        +calcularArea()* float
+        +calcularPerimetro()* float
+    }
+
+    class Punto {
+        -float _x
+        -float _y
+    }
+
+    class Rectangulo {
+        -float _lado_menor
+        -float _lado_mayor
+        +calcularArea() float
+        +calcularPerimetro() float
+        +escalar(factor: float)
+    }
+
+    class Cuadrado {
+        -float _lado
+        +calcularArea() float
+        +calcularPerimetro() float
+        +escalar(factor: float)
+    }
+
+    class Elipse {
+        -float _radio_mayor
+        -float _radio_menor
+        +calcularArea() float
+        +calcularPerimetro() float
+        +escalar(factor: float)
+    }
+
+    class Circulo {
+        -float _radio
+        +calcularArea() float
+        +calcularPerimetro() float
+        +escalar(factor: float)
+    }
+
+    class Linea {
+        +calcularArea() float
+        +calcularPerimetro() float
+    }
+
+    class Triangulo {
+        +calcularArea() float
+        +calcularPerimetro() float
+    }
+
+    class Pentagono {
+        +calcularArea() float
+        +calcularPerimetro() float
+    }
+
+    class Lienzo {
+        -list _elementos
+        +agregar_elemento(elemento: ElementoGrafico)
+        +get_elementos() list
+    }
+
+    %% Relaciones de Composición / Agregación
+    ElementoGrafico o-- Punto : tiene
+    Lienzo *-- ElementoGrafico : contiene
+
+    %% Relaciones de Herencia (Estructura final mejorada sin romper Liskov)
+    ElementoGrafico <|-- Rectangulo
+    ElementoGrafico <|-- Elipse
+    ElementoGrafico <|-- Cuadrado
+    ElementoGrafico <|-- Circulo
+    ElementoGrafico <|-- Linea
+    ElementoGrafico <|-- Triangulo
+    ElementoGrafico <|-- Pentagono
