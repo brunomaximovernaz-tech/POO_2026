@@ -1,3 +1,5 @@
+package TP6;
+
 public class Bicicleta implements ImpactoEcologico {
 
     String tipo;

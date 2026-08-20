@@ -1,3 +1,5 @@
+package TP6;
+
 public class Auto implements ImpactoEcologico {
     // Mantenemos la constante original
     private static final double FACTOR_CO2_GAS = 2.31;

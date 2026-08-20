@@ -1,3 +1,5 @@
+package TP6;
+
 public class Edificio implements ImpactoEcologico {
     private static final double FACTOR_CO2_GAS = 1.93;
 
