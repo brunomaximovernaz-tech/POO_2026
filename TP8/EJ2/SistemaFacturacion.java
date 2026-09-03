@@ -1,12 +1,14 @@
+package EJ2;
+
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.LinkedHashMap;
 
 class Producto {
-    private String nombre;
-    private double precioBase;
-    private double porcentajeIva;
+    private final String nombre;
+    private final double precioBase;
+    private final double porcentajeIva;
 
     public Producto(String nombre, double precioBase, double porcentajeIva) {
         this.nombre = nombre;
@@ -28,11 +30,11 @@ class Producto {
 }
 
 class LineaFactura {
-    private int cantidad;
-    private Producto producto;
+    private final int cantidad;
+    private final Producto producto;
     // Congelamiento histórico (Punto 1)
-    private double precioUnitarioFacturado;
-    private double porcentajeIvaFacturado;
+    private final double precioUnitarioFacturado;
+    private final double porcentajeIvaFacturado;
 
     public LineaFactura(int cantidad, Producto producto) {
         this.cantidad = cantidad;
@@ -84,9 +86,9 @@ class LineaFactura {
 }
 
 class Factura {
-    private String tipoComprobante; // "A" o "B"
-    private double porcentajeDescuento; // Ej: 15.0 para 15%
-    private List<LineaFactura> lineas;
+    private final String tipoComprobante; // "A" o "B"
+    private final double porcentajeDescuento; // Ej: 15.0 para 15%
+    private final List<LineaFactura> lineas;
 
     public Factura(String tipoComprobante, double porcentajeDescuento, List<LineaFactura> lineas) {
         this.tipoComprobante = tipoComprobante;
