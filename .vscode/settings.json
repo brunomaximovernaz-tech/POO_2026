@@ -1,3 +1,9 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "TP8/3",
+        "TP8/2",
+        "TP8/1",
+        "SmartTicket-ProyectoBase/src/main/java/com/smartticket"
+    ]
 }
