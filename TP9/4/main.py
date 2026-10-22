@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI 
 import models
 from database import engine
 from routers import router
@@ -13,4 +13,4 @@ app = FastAPI(
 )
 
 # Incluir las rutas
-app.include_router(router)
+app.include_router(router) 
